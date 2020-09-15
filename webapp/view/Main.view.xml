@@ -1,0 +1,54 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="test.test.controller.Main" id="v_main">
+	<l:VerticalLayout class="sapUiContentPadding" width="100%">
+		<l:content>
+			<Label text="{i18n>UPC}" labelFor="inpUPC"/>
+			<HBox fitContainer="true">
+				<!--<Input id="inpUPC" type="Text" placeholder="{i18n>enterProduct}" showSuggestion="true" showValueHelp="true"-->
+				<!--	valueHelpRequest="handleValueHelp_UPC" suggestionItems="{/ArticleListSet}" suggestionItemSelected="suggestionUPCSelected"-->
+				<!--	change="changeGetUpcDescription">-->
+
+				<!--	<suggestionItems>-->
+				<!--		<core:ListItem key="{Material}" text="{MatlDesc}" additionalText="{MatlDesc}"/>-->
+				<!--	</suggestionItems>-->
+				<!--</Input>-->
+				<!--<Label text="Selected Key : "/>-->
+				<Text id="selectedUPC" textAlign="Center" visible="false"/>
+				<Input width="100%" id="inpUPC"/>
+			<items/>
+			</HBox>
+			<Label text="{i18n>Quantity}" labelFor="inpQuantity"/>
+			<Input id="inpQuantity" type="Number" placeholder="{i18n>enterQuantity}" change="onQuantityChange"/>
+			<Button text="{i18n>Add}" width="100px" id="btnAdd" icon="sap-icon://add" press="saveEntry"/>
+			<Table id="tbl">
+				<columns>
+					<Column/>
+					<Column>
+						<Text text="{i18n>UPC}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>OnhandQty}"/>
+					</Column>					
+					<Column>
+						<Text text="{i18n>Quantity}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>Desc}"/>
+					</Column>
+				</columns>
+				<!--<items>-->
+				<!--	<ColumnListItem id="rows" >-->
+				<!--		<cells>-->
+				<!--			<Text text="{Ean11}" />-->
+				<!--            			<Text text="{Quantity}" />-->
+				<!--            			<Text text="{Productname}" />   -->
+				<!--		</cells>-->
+				<!--	</ColumnListItem>-->
+				<!--</items>-->
+			</Table>
+			<HBox>
+				<Button text="{i18n>createSTO}" id="btnCrtSTO" press="createSTO" icon="sap-icon://create"/>
+				<Button text="{i18n>resetTable}" id="btnresetTable" press="resetTable" icon="sap-icon://delete"/>
+			</HBox>
+		</l:content>
+	</l:VerticalLayout>
+</mvc:View>
